@@ -52,6 +52,7 @@ body{
     cursor: pointer;
     border-radius: 10px;
     color: white;
+    font-size: 32px;    
 }
 
 .numbers{
@@ -59,10 +60,31 @@ body{
     height: 70px;
     width: 80px;
     border: 2px solid rgb(30, 28, 41);
-    font-size: 32px;
+}
+
+.operadores{
+    background: rgb(54, 52, 70);
+    height: 70px;
+    width: 80px;
+    border: 2px solid rgb(30, 28, 41);
+}
+
+.equal{
+    background: rgb(54, 52, 70);
+    height: 70px;
+    width: 80px;
+    border: 2px solid rgb(30, 28, 41);
 }
 
 .numbers:hover{
+    background: rgb(42, 41, 54);
+}
+
+.operadores:hover{
+    background: rgb(42, 41, 54);
+}
+
+.equal:hover{
     background: rgb(42, 41, 54);
 }
 
