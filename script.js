@@ -12,7 +12,9 @@ function writeNumber(){
                 isTrue = false;
             }
             else{
-                screen.innerText += number.innerText;
+                 if (screen.innerText.length < 9) {
+                    screen.innerText += number.innerText;
+                }
             }
         });
     });
@@ -20,7 +22,16 @@ function writeNumber(){
     const equal = document.querySelector(".equal");
     equal.addEventListener("click", () => {
            try {
-            screen.innerText = eval(screen.innerText);
+            let expression = screen.innerText;
+            
+            if (expression.includes("%")) {
+                
+                expression = expression.replace(/(\d+)([\+\-\*\/])(\d+)%/g, (_, num1, operator, num2) => {
+                    return `${num1}${operator}(${num1}*${num2}/100)`;
+                });
+            }
+
+            screen.innerText = eval(expression);
             isTrue = true;
         } catch {
             screen.innerText = "Erro";

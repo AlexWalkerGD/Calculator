@@ -37,6 +37,7 @@ body{
     justify-items: end;
     align-content: center;
     padding-right: 10px;
+    overflow-y: auto;
 }
 
 #buttons{
